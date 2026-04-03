@@ -1,0 +1,122 @@
+[
+    {
+        "company": "Murupdotid",
+        "type": "Full-time",
+        "logo": "https://media.licdn.com/dms/image/v2/D560BAQGVoov3JhKR8w/company-logo_200_200/B56Zcgg7q1HgAI-/0/1748597194720/murup_logo?e=2147483647&v=beta&t=VhiYNKA2gyTfc0RTo3qOyLxEgSeNLar8nGWJgYdx88E",
+        "initial": "M",
+        "roles": [
+            {
+                "title": "Creative Head",
+                "start_date": "2025-09-01",
+                "end_date": null
+            }
+        ]
+    },
+    {
+        "company": "The Southeast Asia Desk",
+        "type": "Part-Time",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb7gIq48pq-jXccEYG3_XTmSoj1yrUYrtl9g&s",
+        "initial": "S",
+        "roles": [
+            {
+                "title": "Lead Niche Content Development — Senior News Editor",
+                "start_date": "2025-08-01",
+                "end_date": null
+            }
+        ]
+    },
+    {
+        "company": "RA Media Lab",
+        "type": "Self-employed",
+        "logo": null,
+        "initial": "R",
+        "roles": [
+            {
+                "title": "Social Media Manager & Content Creator",
+                "start_date": "2022-01-01",
+                "end_date": null
+            }
+        ]
+    },
+    {
+        "company": "SEA Today",
+        "type": "Full-time",
+        "logo": "https://media.licdn.com/dms/image/v2/C560BAQG9kee7Zb1czQ/company-logo_200_200/company-logo_200_200/0/1630651474026?e=2147483647&v=beta&t=mIhP4uw9Fzg9dWsytPSMrwVYZyAacHFOjDTT0PwvzsA",
+        "initial": "S",
+        "roles": [
+            {
+                "title": "Primetime Program News Producer",
+                "start_date": "2024-12-01",
+                "end_date": "2025-07-31"
+            },
+            {
+                "title": "Content Producer",
+                "start_date": "2023-07-01",
+                "end_date": "2024-12-31"
+            },
+            {
+                "title": "Morning News Program Producer",
+                "start_date": "2021-07-01",
+                "end_date": "2023-07-01"
+            }
+        ]
+    },
+    {
+        "company": "Metro TV",
+        "type": "Full-time",
+        "logo": "https://yt3.googleusercontent.com/qX0Or-6wqAYGXEPiWV6ELZmJGRm2JtOIYYd2r54UQqaDKFlBeezvfgT_b6SB3JZTS16RjANs=s900-c-k-c0x00ffffff-no-rj",
+        "initial": "M",
+        "roles": [
+            {
+                "title": "Senior Producer",
+                "start_date": "2020-02-01",
+                "end_date": "2021-06-30"
+            },
+            {
+                "title": "Talkshow News Producer",
+                "start_date": "2019-11-01",
+                "end_date": "2020-01-01"
+            },
+            {
+                "title": "Morning News Program Producer",
+                "start_date": "2019-08-01",
+                "end_date": "2019-10-01"
+            },
+            {
+                "title": "Chief of Metro TV West Java Bureau",
+                "start_date": "2017-02-01",
+                "end_date": "2019-07-31"
+            },
+            {
+                "title": "Morning News Program Producer",
+                "start_date": "2017-02-01",
+                "end_date": "2019-07-01"
+            },
+            {
+                "title": "In-Depth/ DOcumentary Junior Producer",
+                "start_date": "2015-09-01",
+                "end_date": "2017-01-31"
+            },
+            {
+                "title": "Primetime Program Junior Producer",
+                "start_date": "2015-03-01",
+                "end_date": "2015-08-31"
+            },
+            {
+                "title": "Talkshow News Reporter",
+                "start_date": "2014-02-01",
+                "end_date": "2015-02-28"
+            },
+            {
+                "title": "In-Depth News Reporter",
+                "start_date": "2013-11-01",
+                "end_date": "2014-01-31"
+            },
+            {
+                "title": "Daily Program News Reporter",
+                "start_date": "2012-02-01",
+                "end_date": "2013-10-31"
+            }
+        ]
+    }
+]

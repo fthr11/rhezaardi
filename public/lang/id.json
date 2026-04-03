@@ -1,0 +1,43 @@
+{
+    "nav": {
+        "home": "Beranda",
+        "about": "Tentang",
+        "blogs": "Blog",
+        "works": "Proyek"
+    },
+    "footer": {
+        "copyright": "© Rheza Ardiansyah | 2026"
+    },
+    "home": {
+        "name": "Rheza Ardiansyah",
+        "bio1": "Saya membuat dokumenter yang melibatkan, memengaruhi, dan menginspirasi.",
+        "bio2": "Dengan pengalaman 14+ tahun di bidang jurnalisme, produksi konten, dan keterlibatan pemangku kepentingan, saya telah memimpin redaksi, proyek multimedia, dan inisiatif urusan publik di sektor digital, penyiaran, dan LSM.",
+        "bio3": "Di sini, saya berbagi wawasan tentang storytelling, kepemimpinan, dan mengubah ide menjadi konten yang berdampak.",
+        "latest_blog": "Blog Terbaru",
+        "see_all": "Lihat Semua →",
+        "latest_projects": "Proyek Terbaru",
+        "blog1_title": "Bercerita di Era Digital",
+        "blog1_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus.",
+        "blog2_title": "Seni Pembuatan Film Dokumenter",
+        "blog2_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus.",
+        "blog3_title": "Kepemimpinan di Redaksi Modern",
+        "blog3_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus.",
+        "proj1_title": "Dokumenter Raja Ampat",
+        "proj1_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus.",
+        "proj2_title": "Seri Konservasi Satwa Liar",
+        "proj2_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus.",
+        "proj3_title": "Suara Perkotaan",
+        "proj3_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus."
+    },
+    "about": {
+        "title": "Tentang Saya",
+        "intro": "Saya membuat dokumenter yang melibatkan, memengaruhi, dan menginspirasi—kisah yang melampaui narasi permukaan untuk mengungkap kebenaran yang lebih dalam dan perspektif manusiawi. Pekerjaan saya didorong oleh hasrat terhadap penceritaan yang bermakna, di mana setiap proyek dibentuk dengan cermat untuk terhubung dengan penonton secara emosional sambil menyampaikan pesan yang jelas dan berdampak.",
+        "body1": "Dengan pengalaman lebih dari 14 tahun di bidang jurnalisme, produksi konten, dan keterlibatan pemangku kepentingan, saya telah membangun fondasi yang kuat di berbagai lanskap media. Saya telah memimpin redaksi, mengelola produksi multimedia, dan berkontribusi pada inisiatif urusan publik yang mencakup platform digital, media penyiaran, dan sektor LSM.",
+        "body2": "Di sini, saya berbagi wawasan dari pengalaman bertahun-tahun dalam storytelling, kepemimpinan, dan eksekusi kreatif. Tujuan saya adalah menginspirasi orang lain untuk menceritakan kisah yang lebih baik, berpikir lebih kritis, dan menciptakan karya yang mendorong perubahan bermakna dalam lanskap media saat ini."
+    },
+    "blogs": {
+        "title": "Semua Blog",
+        "blog_title": "Lorem Ipsum",
+        "blog_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus."
+    }
+}

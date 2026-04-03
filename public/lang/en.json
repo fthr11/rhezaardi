@@ -1,0 +1,43 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "blogs": "Blogs",
+        "works": "Works"
+    },
+    "footer": {
+        "copyright": "© Rheza Ardiansyah | 2026"
+    },
+    "home": {
+        "name": "Rheza Ardiansyah",
+        "bio1": "I craft documentaries that engage, influence, and inspire.",
+        "bio2": "With 14+ years in journalism, content production, and stakeholder engagement, I've led a newsroom, multimedia projects, and public affairs initiatives across digital, broadcast, and NGO sectors.",
+        "bio3": "Here, I share insights on storytelling, leadership, and turning ideas into impactful content.",
+        "latest_blog": "Latest Blog",
+        "see_all": "See All →",
+        "latest_projects": "Latest Projects",
+        "blog1_title": "Storytelling in the Digital Age",
+        "blog1_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus.",
+        "blog2_title": "The Art of Documentary Filmmaking",
+        "blog2_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus.",
+        "blog3_title": "Leadership in Modern Newsrooms",
+        "blog3_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus.",
+        "proj1_title": "Raja Ampat Documentary",
+        "proj1_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus.",
+        "proj2_title": "Wildlife Conservation Series",
+        "proj2_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus.",
+        "proj3_title": "Urban Voices",
+        "proj3_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus."
+    },
+    "about": {
+        "title": "About me",
+        "intro": "I craft documentaries that engage, influence, and inspire—stories that go beyond surface-level narratives to uncover deeper truths and human perspectives. My work is driven by a passion for meaningful storytelling, where each project is carefully shaped to connect with audiences emotionally while delivering clear, impactful messages. Whether capturing real-life experiences or translating complex issues into compelling visuals, I aim to create content that not only informs but also leaves a lasting impression.",
+        "body1": "With over 14 years of experience in journalism, content production, and stakeholder engagement, I have developed a strong foundation across multiple media landscapes. I have led a newsroom, managed multimedia productions, and contributed to public affairs initiatives spanning digital platforms, broadcast media, and the NGO sector. Throughout my career, I have collaborated with diverse teams, navigated fast-paced environments, and consistently delivered high-quality content under tight deadlines while maintaining editorial integrity and strategic alignment.",
+        "body2": "Here, I share insights drawn from years of hands-on experience in storytelling, leadership, and creative execution. I explore how ideas evolve into impactful content, from initial concept development to final delivery, while also reflecting on the role of leadership in guiding teams and shaping narratives. My goal is to inspire others to tell better stories, think more critically, and create work that drives meaningful change in today's dynamic media landscape."
+    },
+    "blogs": {
+        "title": "All Blogs",
+        "blog_title": "Lorem Ipsum",
+        "blog_excerpt": "Lorem ipsum dolor sit amet, consectetur adipisci elit. Pellentesque lectus."
+    }
+}
