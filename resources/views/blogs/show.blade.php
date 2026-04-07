@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $blog->title . ' — Rheza Ardiansyah')
+@section('title', $blog->title . ' | Rheza Ardiansyah')
 @section('description', Str::limit(strip_tags($blog->content), 160))
 @section('content')
     <div class="max-w-4xl mx-auto px-6 pt-14 sm:pt-16">
@@ -17,15 +17,15 @@
 
         {{-- ====== META : Tags + Date ====== --}}
         <div class="flex flex-wrap items-center  gap-3 mb-5">
+            <span class="text-[12px] text-neutral-400">{{ $blog->created_at->format('d M Y') }}</span>
             @if ($blog->tags)
                 @foreach ($blog->tags as $tag)
-                    <span
-                        class="text-[11px] font-semibold tracking-widest uppercase text-neutral-400 border border-neutral-200 px-2.5 py-1 rounded-full">
+                    <a href="{{ route('blogs.index', ['locale' => app()->getLocale()]) }}?tag={{ urlencode($tag) }}" wire:navigate
+                        class="text-[11px] font-semibold tracking-widest uppercase text-neutral-400 border border-neutral-200 px-2.5 py-1 rounded-full hover:border-neutral-500 hover:text-neutral-600 transition-colors">
                         {{ $tag }}
-                    </span>
+                    </a>
                 @endforeach
             @endif
-            <span class="text-[12px] text-neutral-400">{{ $blog->created_at->format('d M Y') }}</span>
         </div>
 
         {{-- ====== PAGE TITLE ====== --}}
@@ -55,10 +55,11 @@
             <div class="flex flex-wrap gap-2">
                 @if ($blog->tags)
                     @foreach ($blog->tags as $tag)
-                        <span
-                            class="text-[12px] text-neutral-500 border border-neutral-200 rounded-full px-3 py-1 hover:border-neutral-400 transition-colors">
+                        <a href="{{ route('blogs.index', ['locale' => app()->getLocale()]) }}?tag={{ urlencode($tag) }}"
+                            wire:navigate
+                            class="text-[12px] text-neutral-500 border border-neutral-200 rounded-full px-3 py-1 hover:border-neutral-900 hover:text-neutral-900 transition-colors">
                             #{{ $tag }}
-                        </span>
+                        </a>
                     @endforeach
                 @endif
             </div>

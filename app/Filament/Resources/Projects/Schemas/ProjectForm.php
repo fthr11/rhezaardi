@@ -36,7 +36,7 @@ class ProjectForm
                                     ->disk('projects')
                                     ->multiple()
                                     ->image()
-                                    ->maxFiles(2)
+                                    ->maxFiles(3)
                                     ->maxSize(10240),
                             ]),
                         \Filament\Forms\Components\Repeater::make('embed')

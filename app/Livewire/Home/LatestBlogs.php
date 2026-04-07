@@ -18,7 +18,6 @@ class LatestBlogs extends Component
         $latestBlogs = Cache::remember('latest_blogs_' . app()->getLocale(), 3600, function () {
             return Blog::select(['slugEN', 'slugID', 'created_at', 'contentEN', 'contentID', 'titleEN', 'titleID', 'thumbnail'])
                 ->latest()
-                ->skip(1)
                 ->take(3)
                 ->get();
         });

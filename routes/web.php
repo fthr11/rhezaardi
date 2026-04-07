@@ -10,6 +10,21 @@ Route::get('/', function () {
     return redirect('/' . session('locale', config('app.locale')));
 });
 
+Route::get('/sitemap.xml', function () {
+    $locales = ['en', 'id'];
+    $blogs = \App\Models\Blog::all();
+    $works = \App\Models\Project::all();
+
+    $content = view('sitemap', [
+        'locales' => $locales,
+        'blogs' => $blogs,
+        'works' => $works,
+    ]);
+
+    return response($content, 200)
+        ->header('Content-Type', 'text/xml');
+});
+
 // ── Localized routes group ───────────────────────────────────────────────────
 Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'en|id']], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');

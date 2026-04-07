@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'All Blogs — Rheza Ardiansyah')
+@section('title', 'All Blogs | Rheza Ardiansyah')
 @section('description', 'All blog posts by Rheza Ardiansyah — stories, insights, and reflections on journalism and storytelling.')
 
 @section('content')

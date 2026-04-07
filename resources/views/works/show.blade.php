@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $project->title . ' — Rheza Ardiansyah')
+@section('title', $project->title . ' | Rheza Ardiansyah')
 @section('description', Str::limit(strip_tags($project->description), 160))
 
 @section('content')
@@ -16,10 +16,19 @@
             {{ __('works.back') }}
         </a>
 
-        {{-- ====== META : Date ====== --}}
-        <div class="flex items-center gap-3 mb-5">
+        {{-- ====== META : Category + Date ====== --}}
+        <div class="flex flex-wrap items-center gap-3 mb-5">
             <span class="text-[12px] text-neutral-400">{{ $project->created_at->format('d M Y') }}</span>
+            @if ($project->category)
+                <a href="{{ route('works.index', ['locale' => app()->getLocale()]) }}?category={{ $project->project_category_id }}"
+                    wire:navigate
+                    class="text-[11px] font-semibold tracking-widest uppercase text-neutral-400 border border-neutral-200 px-2.5 py-1 rounded-full hover:border-neutral-500 hover:text-neutral-600 transition-colors">
+                    {{ $project->category->name }}
+                </a>
+            @endif
         </div>
+
+
 
         {{-- ====== PAGE TITLE ====== --}}
         <h1

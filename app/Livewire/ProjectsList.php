@@ -4,15 +4,21 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\WithPagination;
+use Livewire\Attributes\Url;
 use App\Models\Project;
 use App\Models\ProjectCategory;
+use Illuminate\Support\Facades\Cache;
 
 class ProjectsList extends Component
 {
     use WithPagination;
 
+    #[Url(as: 'category', history: true, keep: true)]
     public $category = '';
+
+    #[Url(as: 'sort', history: true, keep: true)]
     public $sort = 'latest';
+
     public $perPage = 6;
 
     public function loadMore()
@@ -40,7 +46,7 @@ class ProjectsList extends Component
     public function render()
     {
         // Cache categories as they rarely change
-        $categories = \Illuminate\Support\Facades\Cache::remember('project_categories', 3600, function () {
+        $categories = Cache::remember('project_categories_list', 3600, function () {
             return ProjectCategory::all();
         });
 
@@ -49,7 +55,7 @@ class ProjectsList extends Component
             ->with(['category:id,nameEN,nameID']);
 
         // category filter by ID
-        if ($this->category) {
+        if (!empty($this->category)) {
             $query->where('project_category_id', $this->category);
         }
 

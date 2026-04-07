@@ -35,7 +35,7 @@ class BlogForm
                         FileUpload::make('images')
                             ->disk('blogs')
                             ->multiple()
-                            ->maxFiles(2)
+                            ->maxFiles(3)
                             ->maxSize(10240)
                             ->image()
                     ]),

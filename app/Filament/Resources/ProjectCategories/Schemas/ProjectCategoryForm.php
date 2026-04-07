@@ -16,16 +16,16 @@ class ProjectCategoryForm
             ->components([
                 Grid::make(1)
                     ->schema([
-                        TextInput::make('nameIndonesia')
+                        TextInput::make('nameID')
                             ->required()
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slugID', Str::slug($state))),
-                        TextInput::make('nameEnglish')
+                        TextInput::make('nameEN')
                             ->required()
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slugEN', Str::slug($state))),
-                        TextInput::make('slugID')->unique(ignoreRecord: true)->required()->disabled(),
-                        TextInput::make('slugEN')->unique(ignoreRecord: true)->required()->disabled(),
+                        TextInput::make('slugID')->unique(ignoreRecord: true)->required()->readOnly()->dehydrated(),
+                        TextInput::make('slugEN')->unique(ignoreRecord: true)->required()->readOnly()->dehydrated(),
                     ])
             ]);
     }

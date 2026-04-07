@@ -4,13 +4,20 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Livewire\WithPagination;
+use Livewire\Attributes\Url;
 use App\Models\Blog;
+use Illuminate\Support\Facades\Cache;
 
 class BlogsList extends Component
 {
     use WithPagination;
 
+    #[Url(as: 'tag', history: true, keep: true)]
+    public $tag = '';
+
+    #[Url(as: 'sort', history: true, keep: true)]
     public $sort = 'newest';
+
     public $perPage = 6;
 
     public function loadMore()
@@ -24,6 +31,18 @@ class BlogsList extends Component
         $this->resetPage();
     }
 
+    public function setTag($t)
+    {
+        $this->tag = $t;
+        $this->resetPage();
+    }
+
+    public function clearTag()
+    {
+        $this->tag = '';
+        $this->resetPage();
+    }
+
     public function placeholder()
     {
         return view('livewire.home.placeholder-grid');
@@ -31,7 +50,17 @@ class BlogsList extends Component
 
     public function render()
     {
-        $query = Blog::query()->select(['id', 'slugEN', 'slugID', 'titleEN', 'titleID', 'contentEN', 'contentID', 'thumbnail', 'created_at']);
+        $query = Blog::query()->select(['id', 'slugEN', 'slugID', 'titleEN', 'titleID', 'contentEN', 'contentID', 'thumbnail', 'tags', 'created_at']);
+
+        // Filter based on Tag
+        if (!empty($this->tag)) {
+            // We use a grouped OR to catch various JSON string formats depending on the database driver
+            $query->where(function ($q) {
+                $q->whereJsonContains('tags', $this->tag)
+                    ->orWhere('tags', 'like', '%"' . $this->tag . '"%')
+                    ->orWhere('tags', 'like', '%[' . $this->tag . ']%'); // Support for simple stringified arrays
+            });
+        }
 
         // Sort options: newest, oldest, or numeric year
         if ($this->sort === 'newest' || $this->sort === 'latest') {
@@ -40,11 +69,12 @@ class BlogsList extends Component
             $query->orderBy('created_at', 'asc');
         } elseif (is_numeric($this->sort)) {
             $query->whereYear('created_at', (int) $this->sort)->orderBy('created_at', 'desc');
+        } else {
+            $query->orderBy('created_at', 'desc');
         }
 
-        // Optimize: Get years directly from database instead of model hydration
-        // Use caching to further reduce CPU and DB load
-        $availableYears = \Illuminate\Support\Facades\Cache::remember('blog_available_years', 3600, function () {
+        // Cache for available years
+        $availableYears = Cache::remember('blog_available_years_list', 3600, function () {
             return Blog::selectRaw('YEAR(created_at) as year')
                 ->distinct()
                 ->orderBy('year', 'desc')
@@ -56,7 +86,7 @@ class BlogsList extends Component
 
         return view('livewire.blogs-list', [
             'blogs' => $blogs,
-            'availableYears' => $availableYears
+            'availableYears' => $availableYears,
         ]);
     }
 }

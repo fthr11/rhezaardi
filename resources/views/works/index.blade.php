@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'All Works — Rheza Ardiansyah')
+@section('title', 'All Works | Rheza Ardiansyah')
 @section('description', 'All projects and works by Rheza Ardiansyah — documentaries, journalism, and more.')
 
 @section('content')
